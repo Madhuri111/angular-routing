@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PickerModule } from '@ctrl/ngx-emoji-mart';
+import { MatListModule } from '@angular/material/list';
 
 import { MyroutingRoutingModule } from './myrouting-routing.module';
 import { ChangeComponent } from '../change/change.component';
@@ -21,15 +22,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 import { ImpPipePipe } from '../impure-pipes/imp-pipe.pipe';
 import { IfDirective } from '../custom/if.directive';
 import { HighlightPipe } from '../pipes/highlight.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Basictemplate } from '../createform/basictemplate.component';
+import { MyroutingComponent } from './myrouting.component';
 @NgModule({
   declarations: [
     ChangeComponent,
@@ -47,11 +50,15 @@ import { Basictemplate } from '../createform/basictemplate.component';
     IfDirective,
     HighlightPipe,
     Basictemplate,
+    MyroutingComponent,
   ],
   imports: [
     PickerModule,
+    MatListModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatToolbarModule,
+    MatSidenavModule,
     MatInputModule,
     MatIconModule,
     MatFormFieldModule,
