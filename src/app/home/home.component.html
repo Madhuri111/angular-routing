@@ -1,7 +1,5 @@
-
-
-<div class="card mt-4">
-    <ul *ngIf="users">
-        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
-    </ul>
+<div class="card">
+  <ul *ngIf="users">
+    <li *ngFor="let user of users">{{ user.firstName }} {{ user.lastName }}</li>
+  </ul>
 </div>

@@ -46,12 +46,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { Basictemplate } from './createform/basictemplate.component';
 import { FinalFormComponent } from './final-form/final-form.component';
 import { MatSelectionList } from '@angular/material/list';
+
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './register/register.component';
@@ -63,22 +63,22 @@ import { PickerModule } from '@ctrl/ngx-emoji-mart';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    Basictemplate,
-    HighlightPipe,
-    TryComponent,
-    AppComponent,
-    CustomComponent,
-    DynamicComponent,
-    ImpurePipesComponent,
-    PipesComponent,
-    ImpPipePipe,
-    ChangeComponent,
-    IfDirective,
-    TemplateFormComponent,
-    ReactiveFormComponent,
-    TryComponent,
-    CreateformComponent,
-    FinalFormComponent,
+    // Basictemplate,
+    // HighlightPipe,
+    // TryComponent,
+    // AppComponent,
+    // CustomComponent,
+    // DynamicComponent,
+    // ImpurePipesComponent,
+    // PipesComponent,
+    // ImpPipePipe,
+    // ChangeComponent,
+    // IfDirective,
+    // TemplateFormComponent,
+    // ReactiveFormComponent,
+    // TryComponent,
+    // CreateformComponent,
+    // FinalFormComponent,
   ],
   imports: [
     PickerModule,
