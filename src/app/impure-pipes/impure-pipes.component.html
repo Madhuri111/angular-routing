@@ -1,0 +1,8 @@
+<div class="madhuri">
+    <ul>
+        <li *ngFor="let user of users | impPipe:'name' " >
+            {{user.name}} - {{ user.age}}
+        </li>
+        <button (click)="onClickAdd()">CLick me &add</button>
+    </ul>
+</div>

@@ -1,0 +1,44 @@
+<!-- nav -->
+<!-- <title>angular-routing</title> -->
+<!-- <nav  > -->
+<!-- <div class="navbar-nav"> -->
+
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="isExpanded" *ngIf="currentUser">
+    <mat-nav-list>
+      <div *ngIf="isExpanded">
+        <a mat-list-item routerLink="/">Home</a>
+        <!-- <a  mat-list-item
+                  *ngFor="let route of routes"
+                  mat-list-item
+                  [routerLink]="route.path"
+                  
+                > 
+               {{ route.label }} </a
+                > -->
+        <a mat-list-item (click)="logout()">Logout</a>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar>
+      <mat-toolbar-row class="justify-content-between">
+        <h4 matSubheader>Projects</h4>
+
+        <button mat-icon-button (click)="isExpanded = !isExpanded">
+          <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+          <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+<!-- </div> -->
+<!-- </nav> -->
+
+<!-- main app container -->
+<div>
+  <router-outlet></router-outlet>
+</div>

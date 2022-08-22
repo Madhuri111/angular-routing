@@ -1,0 +1,32 @@
+
+
+<form [formGroup]="profileForm"  class="form-container">
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>User</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="full-width">
+                    <input matInput formControlName="firstName" placeholder="First Name">
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field class="full-width">
+                    <input matInput formControlName="lastName" placeholder="Last Name">
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="saveForm()" mat-raised-button color="primary">Save</button>
+      </mat-card-actions>
+      <!-- <button mat-raised-button>Basic</button> -->
+
+
+    <p> entered values will be printed in console</p>
+</mat-card>
+</form>

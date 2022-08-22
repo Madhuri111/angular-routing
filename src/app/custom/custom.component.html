@@ -1,0 +1,20 @@
+<!-- gonna create a structural directive which will work just like ngIf directive -->
+<!-- Attribute directives listen to and modify the behavior of other HTML elements, attributes, properties, and components.
+
+Structural directives are directives which change the DOM layout by adding and removing DOM element.
+like ngIf -->
+
+
+<div class="mad">
+<div >
+    <button class="btn btn-primary" (click)="isAvailable = !isAvailable">
+        Toggle the condition
+    </button>
+</div>
+<div *appIf="isAvailable">
+    This condition enables with custom structural directive
+</div>
+
+</div>
+<!-- templateRef will come if we represent it as structural directive => [] -->
+<!-- elementref will come if we represent it as attribute directive => * -->

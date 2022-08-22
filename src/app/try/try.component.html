@@ -1,0 +1,105 @@
+<!-- 
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+    <p>
+      <label for="name">Name </label>
+      <input type="text" id="name" name="name" formControlName="name">
+    </p>
+    <p>
+      <label for="name">Roll number </label>
+      <input type="number" id="course" name="course" formControlName="course">
+    </p>
+   
+    <div formArrayName="grades">
+      <div *ngFor="let grade of grades.controls; let i =index">
+        <div [formGroupName]="i">
+          <input type="text" formControlName="type">
+          <input type="number" formControlName="score">
+        </div>
+    </div>
+
+    </div>
+   <p>
+      <button type="submit">Submit</button>
+    </p>
+
+    </form>
+
+  <p>
+    <button type="button" (click)="addGrade()">Add</button>
+  </p> -->
+
+
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()" class="madhuri">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Student</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+    <div formArrayName="students">
+      <div *ngFor="let student of students().controls; let i =index">
+        <div [formGroupName]="i">
+    
+          <div>
+            <mat-form-field>  
+      <label for="name">Name </label>
+      <input  type="text" id="name" name="name" formControlName="name">
+            </mat-form-field>
+          </div>
+    <p>
+      <!-- <mat-form-field> -->
+      <label for="rollnumber">Roll number </label>
+      <input  type="number" id="rollnumber" name="rollnumber" formControlName="rollnumber">
+    <!-- </mat-form-field> -->
+    </p>
+   
+    <p>
+    <mat-form-field>
+      <label for="gender">Gender </label>
+      <input  type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+      <input  type="radio" value="female" id="gender" name="gender" formControlName="gender"> FeMale
+    </mat-form-field>
+    </p>
+    <p> 
+    <mat-form-field>
+      <label for="course">Course </label>
+      <input  type="text" id="course" name="course" formControlName="course">
+    </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field>
+      <label for="password">Password </label>
+      <input   type="password" id="password" name="password" formControlName="password">
+    </mat-form-field>
+    </p>
+    </div>
+ 
+  
+    </div>
+    
+    </div>
+    </mat-card-content>
+    </mat-card>
+    </form>
+    <p >
+      <button mat-button type="submit" mat-raised-button color="primary">Submit</button>
+    </p>
+    <!-- <div formArrayName="grades">
+      <div *ngFor="let grade of grades.controls; let i =index">
+        <div [formGroupName]="i">
+          <input type="text" formControlName="type">
+          <input type="number" formControlName="score">
+        </div>
+    </div>
+
+    </div> -->
+<!-- </mat-card-content> -->
+
+  <p >
+    <button mat-button type="button" (click)="addStudent()" mat-raised-button color="primary">Add</button>
+    <br>
+    <br>
+    {{ this.studentForm.value | json }}
+
+  </p>
+

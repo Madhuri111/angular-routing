@@ -1,0 +1,87 @@
+.myform{
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    /* display: flex; */
+    /* margin:auto;
+    margin: 1rem;
+    width: 40%;
+    /* height: auto; */
+    /* align-items: center; */
+    text-align: center;
+    /* padding: 1rem 1rem;  */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 5px;
+    /* display: inline; */
+    /* overflow: hidden; */
+}
+.card {
+  margin-left: 20px;
+}
+.madhuri{
+    /* white-space: nowrap; */
+    /* margin:auto; */
+
+    /* display: flex; */
+    /* gap: 10px; */
+    padding-top: 1.5rem;
+
+    align-content: left;
+    /* align-self: left; */
+    /* padding: 1rem 0; */
+    /* max-width: 1200px; */
+}
+
+
+.mybuttons {
+    top: 10%;
+    /* top:auto; */
+    right: 5%;
+    position: fixed;
+    /* padding-top: 1000px; */
+    /* padding-left: 0px; */
+    /* display: inline; */
+    /* padding-bottom: 1000px; */
+}
+
+.delete-btn {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+mat-icon {
+    font-size: 15px;
+    margin-top: -17px;
+}
+
+.demo-table {
+  /* padding-right: 10%; */
+    width: 100%;
+    /* padding: 5rem; */
+    /* border: 2ch; */
+    /* gap: 10px; */
+
+  }
+  
+  .mat-column-demo-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+
+  
+  .mat-column-demo-weight {
+    font-style: italic;
+  }
+  
+ .wrapper
+ {
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px;
+ }

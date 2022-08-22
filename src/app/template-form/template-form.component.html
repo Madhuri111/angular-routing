@@ -1,0 +1,57 @@
+
+<!-- these are forms which are handled in our template file -->
+<!-- forms which are handled in template file -->
+
+<!-- for binding,we must have a name for input fields -->
+
+<!-- every form field should have a name attribute and ngModel attached to it -->
+<!-- will be useful for max 8-10 fields,if we have large forms use reactive forms -->
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)" class="form-container">
+    <mat-card>
+        <mat-card-content>
+            <mat-form-field>
+                <input matInput type="text" name="name" placeholder="Enter name" ngModel>
+            </mat-form-field>
+                <br> <br>
+            <mat-form-field>
+                <input matInput type="password" name="password" placeholder="Enter Password" ngModel>
+                <br> <br>
+            </mat-form-field>
+        </mat-card-content>
+        <br > <br >
+        <button mat-button  mat-raised-button color="primary">Login</button>
+    </mat-card>
+</form>
+
+
+<!-- define a template variable first -->
+<!-- <form #loginForm="ngForm"  class="form-container" (ngSubmit)="loginUser(loginForm.value)" >
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>User</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="full-width">
+                        <input  formControlName="name" placeholder="Name" ngModel>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field class="full-width">
+                        <input  formControlName="password" placeholder="Password" ngModel>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button  mat-raised-button color="primary">Login</button>
+          </mat-card-actions>
+    
+    
+        <p> entered values will be printed in console</p>
+    </mat-card>
+    </form> -->

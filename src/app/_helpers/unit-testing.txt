@@ -1,0 +1,26 @@
+so initiall we first load the component and create the instance of it
+whenever we create the new component , it basically does the above thing
+
+testbed is the primary upi for writing unit tests in angular
+testbed.configureTestingModule()
+componenttexture helps us in debugging the testcase and in run time detectChanges
+we can automatically detect the changes using fixture
+
+basically the concept of testing,suppose i have a property in ts file,and you want to check if that property is having the value you have given or not
+
+usage:
+it("testing title here",<arrow function here> ()=>
+{
+    then expecting the component.componentname tobe(user)
+    so if it doesnt satisfy it ,this should fail
+})
+
+use ngtest() for testing now compiles how many test cases and where they are written
+
+so when its different, this will fail and it shows the description of the issue
+
+got 5 errors in my unit testing: one of them
+NullInjectorError: R3InjectorError(DynamicTestModule)[FormBuilder -> FormBuilder]: 
+
+how i resolved:
+FormBuilder is defined in the FormsModule. You will notice that it is imported in AppModule (which is why your app compiles and runs) but it is not imported in configureTestingModule in app.component.spec.ts.

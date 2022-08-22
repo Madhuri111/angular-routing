@@ -1,0 +1,15 @@
+
+
+<!-- <div> {{user ? user["firstName"] :"hey" | highlight :user }} </div> -->
+
+<!-- <p class="madhuri" id="id1"> {{ "Hey" | purePipe:colors }}</p> -->
+
+
+<div class="madhuri">
+    <ul>
+        <li *ngFor="let user of users | purePipe:'name' " >
+            {{user.name}} - {{ user.age}}
+        </li>
+        <button (click)="onClickAdd()">CLick me &add</button>
+    </ul>
+</div>

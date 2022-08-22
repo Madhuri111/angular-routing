@@ -1,0 +1,12 @@
+.madhuri{
+    text-align: center;
+    display: grid;
+    width: 50%;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 50px; */
+    padding: 50px;
+}
+
+.buttons {
+    
+}
