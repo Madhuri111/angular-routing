@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+mat-toolbar {
+    position: relative;
+    z-index: 0;
+  }
+  
+  
+  mat-drawer {
+    width: 200px;
+    background: #0f172a;
+  
+  }
+  mat-drawer-container {
+    height: 100%;
+  }
+  
+    .mat-icon {
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
+  
+  
+  
+  .mat-list-item {
+    color: white !important;
+    font-size: 0.8rem;
+    height: 44px !important;
+    margin-bottom: 4px;
+  
+  }
+  
+
+  
+  

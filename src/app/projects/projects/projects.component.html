@@ -1,28 +1,30 @@
+<!-- <mat-drawer-container>  -->
+<!-- <mat-drawer-container>
+  <mat-drawer mode="side"> -->
+
 <mat-drawer-container>
   <mat-drawer mode="side" [opened]="isExpanded">
     <mat-nav-list>
       <div *ngIf="isExpanded">
-        <!-- <div *ngFor="=let route of routes"> -->
-        <a
-          mat-list-item
-          *ngFor="let route of routes"
-          mat-list-item
-          [routerLink]="route.children"
-        >
-          {{ route.children }}
-        </a>
-        <!-- </div> -->
+        <mat-nav-list>
+          <div *ngFor="let route of routes">
+            <a
+              mat-list-item
+              *ngFor="let hey of route.children"
+              [routerLink]="hey.path"
+            >
+              {{ hey.label }}
+            </a>
+          </div>
+        </mat-nav-list>
       </div>
     </mat-nav-list>
   </mat-drawer>
 
   <mat-drawer-content>
     <mat-toolbar>
-      <mat-toolbar-row class="justify-content-between">
-        <!-- <button mat-icon-button (click)="toggleSidebar()">
-          <mat-icon>menu</mat-icon>
-        </button> -->
-        <h4 matSubheader>Projects</h4>
+      <mat-toolbar-row>
+        <h4>Projects</h4>
 
         <button mat-icon-button (click)="isExpanded = !isExpanded">
           <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
@@ -30,9 +32,13 @@
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
+
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
+<!-- </mat-drawer>
+</mat-drawer-container> -->
+<!-- </mat-drawer-container> -->
 
 <!-- <div class="card">
   <div class="card-body">
@@ -105,7 +111,7 @@
       </li>
     </ul> 
     <p class="card-text">
-      <router-outlet></router-outlet>
     </p>
   </div>
 </div> -->
+<router-outlet></router-outlet>
