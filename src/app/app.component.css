@@ -49,4 +49,6 @@ mat-toolbar {
     /* letter-spacing: 1px; */
   }
   
-  
+    .project-item {
+    margin: 5px;
+  }

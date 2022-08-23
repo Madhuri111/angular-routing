@@ -1,0 +1,111 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="isExpanded">
+    <mat-nav-list>
+      <div *ngIf="isExpanded">
+        <!-- <div *ngFor="=let route of routes"> -->
+        <a
+          mat-list-item
+          *ngFor="let route of routes"
+          mat-list-item
+          [routerLink]="route.children"
+        >
+          {{ route.children }}
+        </a>
+        <!-- </div> -->
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <mat-toolbar>
+      <mat-toolbar-row class="justify-content-between">
+        <!-- <button mat-icon-button (click)="toggleSidebar()">
+          <mat-icon>menu</mat-icon>
+        </button> -->
+        <h4 matSubheader>Projects</h4>
+
+        <button mat-icon-button (click)="isExpanded = !isExpanded">
+          <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>
+          <mat-icon *ngIf="isExpanded">chevron_left</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- <div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Projects</h5>
+    <a
+      mat-list-item
+      *ngFor="let route of routes"
+      mat-list-item
+      [routerLink]="route.path"
+    >
+      {{ route.label }}
+    </a>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'custom'" routerLinkActive="active">
+          custom
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="'modelform'"
+          routerLinkActive="active"
+        >
+          modelform</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'pipes'" routerLinkActive="active">
+          pipes
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'impure'" routerLinkActive="active">
+          impure</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'dynamic'" routerLinkActive="active">
+          dynamic
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'change'" routerLinkActive="active">
+          change</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'template'" routerLinkActive="active">
+          template</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="'dynamicforms'"
+          routerLinkActive="active"
+        >
+          dynamicforms
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          [routerLink]="'modelform/add'"
+          routerLinkActive="active"
+        >
+          modelform/add</a
+        >
+      </li>
+    </ul> 
+    <p class="card-text">
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div> -->

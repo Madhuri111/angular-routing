@@ -14,12 +14,13 @@ export class MyroutingComponent {
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
 
   // formFields: Observable<FormValues<any>[]>;
-  // constructor(service: FormfieldcontrolService) {
-  //   console.log(this.formFields);
+  constructor() {
+    console.log('Hey there');
+    //   console.log(this.formFields);
 
-  //   this.formFields = service.getFormFields();
-  //   console.log(this.formFields);
-  // }
+    //   this.formFields = service.getFormFields();
+    //   console.log(this.formFields);
+  }
   close() {
     this.open = false;
   }

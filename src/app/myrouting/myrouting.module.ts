@@ -51,6 +51,7 @@ import { MyroutingComponent } from './myrouting.component';
     HighlightPipe,
     Basictemplate,
     MyroutingComponent,
+    MyroutingComponent,
   ],
   imports: [
     PickerModule,
