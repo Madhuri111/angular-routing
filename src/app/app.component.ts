@@ -2,10 +2,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './_models/user';
 import { FormfieldcontrolService } from './createform/formfieldcontrols.service';
-import { RouterModule } from '@angular/router';
 
 import { AuthenticationService } from './_services/authenticatoin.service';
 import { routes } from './app-routing.module';
+import { routess } from './projects/projects-routing.module';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -18,6 +18,7 @@ export class AppComponent {
   title = 'custom_structural';
   open = false;
   routes = routes;
+  childroutes = routess;
   isExpanded = false;
   sideBarOpen = true;
   public sidebarShow: boolean = false;

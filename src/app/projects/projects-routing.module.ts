@@ -12,7 +12,7 @@ import { AuthGuard } from 'src/app/_helpers/auth.guard';
 import { ProjectsComponent } from './projects/projects.component';
 // import { ProjectsComponent } from './projects/projects.component';
 
-export const routes = [
+export const routess = [
   {
     path: '',
     component: ProjectsComponent,
@@ -23,12 +23,7 @@ export const routes = [
         label: 'custom',
         canActivate: [AuthGuard],
       },
-      {
-        path: 'modelform',
-        component: FinalFormComponent,
-        label: 'model forms',
-        canActivate: [AuthGuard],
-      },
+
       {
         path: 'pipes',
         component: PipesComponent,
@@ -66,11 +61,12 @@ export const routes = [
         label: 'dynamic forms',
         canActivate: [AuthGuard],
       },
+
       {
-        path: 'modelform/add',
+        path: 'modelform',
         component: FinalFormComponent,
+        label: 'model forms',
         canActivate: [AuthGuard],
-        label: 'Reactive Forms',
       },
 
       { path: '**', redirectTo: '' },
@@ -79,7 +75,7 @@ export const routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routess)],
   exports: [RouterModule],
 })
 export class ProjectsRoutingModule {}

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/_services/authenticatoin.service';
-import { routes } from './../projects-routing.module';
+import { routess } from './../projects-routing.module';
 // import routes from '../projects-routing.module';
 // import { routes } from 'src/app/myrouting/myrouting-routing.module';
 @Component({
@@ -16,7 +16,7 @@ export class ProjectsComponent implements OnInit {
 
   open = false;
 
-  routes = routes;
+  routes = routess;
   isExpanded = true;
   sideBarOpen = true;
   public sidebarShow: boolean = false;
