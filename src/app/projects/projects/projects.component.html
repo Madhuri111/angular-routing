@@ -1,27 +1,41 @@
 <!-- <mat-drawer-container>  -->
 <!-- <mat-drawer-container>
   <mat-drawer mode="side"> -->
+<!-- <mat-sidenav-container *ngIf="isExpanded"> -->
+<!-- <mat-sidenav #sidenav mode="side" [opened]="isExpanded"> -->
+<!-- <mat-drawer mode="side"> -->
+<!-- <div *ngIf="isExpanded"> -->
+<!-- <mat-nav-list mode="side"> -->
+<!-- <div *ngFor="let route of routes">
+    <a mat-list-item *ngFor="let hey of route.children" [routerLink]="hey.path">
+      {{ hey.label }}
+    </a>
+  </div> -->
+<!-- </mat-nav-list> -->
+<!-- </div> -->
+<div *ngIf="isExpanded">
+  <nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <div *ngFor="let route of routes">
+          <a *ngFor="let hey of route.children" [routerLink]="hey.path">
+            {{ hey.label }}
+          </a>
+        </div>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- </mat-drawer> -->
+<!-- </mat-sidenav> -->
+<!-- </mat-sidenav-container> -->
+<!-- </mat-drawer-container> -->
+<!-- </mat-sidenav> -->
+<!-- </div> -->
+<!-- </mat-nav-list> -->
+<!-- </mat-drawer> -->
 
-<mat-drawer-container>
-  <mat-drawer mode="side" [opened]="isExpanded">
-    <mat-nav-list>
-      <div *ngIf="isExpanded">
-        <mat-nav-list>
-          <div *ngFor="let route of routes">
-            <a
-              mat-list-item
-              *ngFor="let hey of route.children"
-              [routerLink]="hey.path"
-            >
-              {{ hey.label }}
-            </a>
-          </div>
-        </mat-nav-list>
-      </div>
-    </mat-nav-list>
-  </mat-drawer>
-
-  <mat-drawer-content>
+<!-- <mat-drawer-content>
     <mat-toolbar>
       <mat-toolbar-row>
         <h4>Projects</h4>
@@ -35,7 +49,7 @@
 
     <router-outlet></router-outlet>
   </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-container> -->
 <!-- </mat-drawer>
 </mat-drawer-container> -->
 <!-- </mat-drawer-container> -->

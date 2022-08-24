@@ -1,0 +1,18 @@
+.myform{
+    /* padding-left: 100px; */
+    /* padding-right: 100px; */
+    /* display: flex; */
+    /* margin:auto;
+    margin: 1rem;
+    width: 40%;
+    /* height: auto; */
+    /* align-items: center; */
+    text-align: center;
+    /* padding: 1rem 1rem;  */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 5px;
+    /* display: inline; */
+    /* overflow: hidden; */
+}

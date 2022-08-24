@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
   open = false;
 
   routes = routes;
-  isExpanded = false;
+  isExpanded = true;
   sideBarOpen = true;
   public sidebarShow: boolean = false;
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();

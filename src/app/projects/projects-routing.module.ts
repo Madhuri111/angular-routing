@@ -70,6 +70,7 @@ export const routes = [
         path: 'modelform/add',
         component: FinalFormComponent,
         canActivate: [AuthGuard],
+        label: 'Reactive Forms',
       },
 
       { path: '**', redirectTo: '' },
