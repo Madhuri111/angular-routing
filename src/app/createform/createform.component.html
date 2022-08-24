@@ -4,10 +4,17 @@
       <div *ngSwitchCase="'textbox'">
         <div class="col-md-6">
           <mat-form-field>
-            <label [attr.for]="input.key+index">{{ input.label }}</label>
-            <input autofocus matInput class="form-control" [formControlName]="input.key" [id]="input.key+index"
-              [type]="input.type" />
-            <mat-error *ngIf="this.form.controls[this.input.key].invalid">{{getErrorMessage()}}</mat-error>
+            <label [attr.for]="input.key + index">{{ input.label }}</label>
+            <input
+              autofocus
+              matInput
+              [formControlName]="input.key"
+              [id]="input.key + index"
+              [type]="input.type"
+            />
+            <mat-error *ngIf="this.form.controls[this.input.key].invalid">{{
+              getErrorMessage()
+            }}</mat-error>
             <!-- <mat-error *ngIf="!'[formControlName]'.valid && !email.hasError('required')"> -->
             <!-- Please enter a valid email address -->
             <!-- </mat-error> -->
@@ -30,13 +37,17 @@
         </mat-form-field> -->
 
         <mat-form-field>
-          <mat-label [attr.for]="input.key+index">{{ input.label }}</mat-label>
-          <mat-select [id]="input.key+index" [formControlName]="input.key">
+          <mat-label [attr.for]="input.key + index">{{
+            input.label
+          }}</mat-label>
+          <mat-select [id]="input.key + index" [formControlName]="input.key">
             <mat-option *ngFor="let opt of input.options" [value]="opt.key">{{
               opt.value
-              }}</mat-option>
+            }}</mat-option>
           </mat-select>
-          <mat-error *ngIf="this.form.controls[this.input.key].invalid">{{getErrorMessage()}}</mat-error>
+          <mat-error *ngIf="this.form.controls[this.input.key].invalid">{{
+            getErrorMessage()
+          }}</mat-error>
         </mat-form-field>
         <!-- <div class="col-md-6"> -->
         <!-- <mat-form-field> -->
@@ -52,7 +63,6 @@
         <!-- </mat-form-field> -->
         <!-- </mat-select> -->
         <!-- <mat-form-field> -->
-          
 
         <!-- </div> -->
         <!-- </select> -->
@@ -64,11 +74,16 @@
         <!-- <mat-form-field> -->
 
         <div class="form-check">
-          <mat-checkbox autofocus class="form-check-input" type="checkbox" [formControlName]="input.key"
-            [id]="input.key+index"></mat-checkbox>
-          <label class="form-check-label" [attr.for]="input.key+index">{{
+          <mat-checkbox
+            autofocus
+            class="form-check-input"
+            type="checkbox"
+            [formControlName]="input.key"
+            [id]="input.key + index"
+          ></mat-checkbox>
+          <label class="form-check-label" [attr.for]="input.key + index">{{
             input.label
-            }}</label>
+          }}</label>
         </div>
         <!-- </mat-form-field> -->
       </div>
@@ -102,11 +117,24 @@
 
       <div *ngSwitchCase="'textarea'">
         <mat-form-field>
-          <mat-label [attr.for]="input.key+index">{{ input.label }}</mat-label>
-          <textarea autofocus matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
-            cdkAutosizeMaxRows="15" maxlength="256" class="form-control" [formControlName]="input.key"
-            [id]="input.key+index" rows="2"></textarea>
-          <mat-hint align="start"><strong>Character max length:256</strong> </mat-hint>
+          <mat-label [attr.for]="input.key + index">{{
+            input.label
+          }}</mat-label>
+          <textarea
+            autofocus
+            matInput
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="15"
+            maxlength="256"
+            [formControlName]="input.key"
+            [id]="input.key + index"
+            rows="2"
+          ></textarea>
+          <mat-hint align="start"
+            ><strong>Character max length:256</strong>
+          </mat-hint>
         </mat-form-field>
       </div>
     </mat-card-content>

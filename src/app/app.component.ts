@@ -19,7 +19,7 @@ export class AppComponent {
   open = false;
   routes = routes;
   childroutes = routess;
-  isExpanded = false;
+  isExpanded = true;
   sideBarOpen = true;
   public sidebarShow: boolean = false;
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();

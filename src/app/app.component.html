@@ -36,28 +36,27 @@
   <a mat-list-item routerLink="/">Home</a>
   <a mat-list-item (click)="logout()">Logout</a>
 </div> -->
+
 <mat-drawer-container>
-  <mat-drawer mode="side" [opened]="isExpanded">
+  <mat-drawer mode="side" [opened]="isExpanded" *ngIf="currentUser">
     <mat-nav-list>
       <a mat-list-item routerLink="/">Home</a>
-
       <a mat-list-item (click)="logout()">Logout</a>
-      <div *ngIf="currentUser">
-        <div *ngFor="let route of childroutes">
-          <a
-            mat-list-item
-            *ngFor="let hey of route.children"
-            [routerLink]="hey.path"
-          >
-            {{ hey.label }}
-          </a>
-        </div>
+
+      <div *ngFor="let route of childroutes">
+        <a
+          mat-list-item
+          *ngFor="let hey of route.children"
+          routerLink="projects/{{ hey.path }}"
+        >
+          {{ hey.label }}
+        </a>
       </div>
     </mat-nav-list>
   </mat-drawer>
 
   <mat-drawer-content>
-    <mat-toolbar>
+    <mat-toolbar *ngIf="currentUser">
       <mat-toolbar-row class="justify-content-between">
         <button mat-icon-button (click)="isExpanded = !isExpanded">
           <mat-icon *ngIf="!isExpanded">chevron_right</mat-icon>

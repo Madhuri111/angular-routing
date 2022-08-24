@@ -3,25 +3,41 @@
   <form class="madhuri" (ngSubmit)="onSubmit()" [formGroup]="testform">
     <div class="myform">
       <!-- enable it only if formfields are created -->
-      <div formArrayName="studentForms" *ngFor="let fun of getStudentControls();let i = index">
+      <div
+        formArrayName="studentForms"
+        *ngFor="let fun of getStudentControls(); let i = index"
+      >
         <mat-card class="card">
           <mat-card-header>
-            <mat-card-title>Student {{i+1}}</mat-card-title><span *ngIf="getStudentControls().length>1"><div class="example-button-container">
-              <button title="Delete Student"  align="end" (click)="removeStudentOnClick(i)" class="delete-btn" mat-fab color="primary" aria-label="Example icon button with a delete icon">
-                <mat-icon>delete</mat-icon>
-              </button>
-            </div></span>
+            <mat-card-title>Student {{ i + 1 }}</mat-card-title
+            ><span *ngIf="getStudentControls().length > 1"
+              ><div class="example-button-container">
+                <button
+                  title="Delete Student"
+                  align="end"
+                  (click)="removeStudentOnClick(i)"
+                  class="delete-btn"
+                  mat-fab
+                  color="primary"
+                  aria-label="Example icon button with a delete icon"
+                >
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div></span
+            >
           </mat-card-header>
           <mat-card-content>
-
             <div [formGroupName]="i">
               <div>
-                <div *ngFor="let key of formFields" class="form-group">
-                  <app-createform [input]="key" [form]="$any(fun)" [index]="i"></app-createform>
+                <div *ngFor="let key of formFields">
+                  <app-createform
+                    [input]="key"
+                    [form]="$any(fun)"
+                    [index]="i"
+                  ></app-createform>
                 </div>
               </div>
             </div>
-
           </mat-card-content>
 
           <!-- <div class="form-group">
@@ -37,14 +53,26 @@
       </button>
       <h3>Here's the payload</h3><br>{{payLoad}} -->
     <div class="mybuttons">
-      <button mat-button type="add" mat-raised-button color="primary" [disabled]="testform.invalid" (click)="onAdd()">
+      <button
+        mat-button
+        type="add"
+        mat-raised-button
+        color="primary"
+        [disabled]="testform.invalid"
+        (click)="onAdd()"
+      >
         Add
 
         <!-- <a routerLink="/modelform">Add </a> -->
       </button>
-      &nbsp;
-      &nbsp;
-      <button mat-button type="submit" mat-raised-button color="primary" [disabled]="testform.invalid" >
+      &nbsp; &nbsp;
+      <button
+        mat-button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        [disabled]="testform.invalid"
+      >
         Save
       </button>
 
@@ -54,17 +82,16 @@
   </form>
 </div>
 
-
 <!-- <div > -->
-  <!-- <div  *ngFor="let fun of getStudentControls() ;let i = index"> -->
-    <!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
+<!-- <div  *ngFor="let fun of getStudentControls() ;let i = index"> -->
+<!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
 <!-- 
       <p>{{fun['name'] | json}}</p>
       <p>{{fun['email'] | json}}</p>
       <p>{{fun['sex'] | json}}</p>
       <p>{{fun['country'] | json}}</p>
       <p>{{fun['message'] | json}}</p> -->
-    <!-- <table class="table">
+<!-- <table class="table">
       <thead>
         <tr>
           <th scope="col">Name</th>
@@ -85,36 +112,45 @@
     </table>
 
     </div> -->
-    <!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
+<!-- <div  *ngFor="let fun of dataPur ;let i = index"> -->
 
 <div class="wrapper">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
-      <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef>Name</th>
-    <td mat-cell *matCellDef="let element ">{{element.get('name').value}}</td>
-  </ng-container>
-  <ng-container matColumnDef="email">
-    <th mat-header-cell *matHeaderCellDef>Email</th>
-    <td mat-cell *matCellDef="let element">{{element.get('email').value}}</td>
-  </ng-container>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    class="mat-elevation-z8 demo-table"
+  >
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.get("name").value }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.get("email").value }}
+      </td>
+    </ng-container>
 
-  <ng-container matColumnDef="country">
-    <th mat-header-cell *matHeaderCellDef>country</th>
-    <td mat-cell *matCellDef="let element">{{element.get('country').value}}</td>
-  </ng-container>
-  <ng-container matColumnDef="message">
-    <th mat-header-cell *matHeaderCellDef>message</th>
-    <td mat-cell *matCellDef="let element">{{element.get('message').value}}</td>
-  </ng-container>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-</table>
+    <ng-container matColumnDef="country">
+      <th mat-header-cell *matHeaderCellDef>country</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.get("country").value }}
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="message">
+      <th mat-header-cell *matHeaderCellDef>message</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.get("message").value }}
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
 </div>
 
-
-
-    <!-- <form [formGroup]="testform">
+<!-- <form [formGroup]="testform">
 
     <mat-table [dataSource]="dataSource">
 
@@ -132,7 +168,7 @@
         </mat-cell>
       </ng-container> -->
 
-        <!-- <ng-container cdkColumnDef="weight">
+<!-- <ng-container cdkColumnDef="weight">
         <mat-header-cell *cdkHeaderCellDef> Weight </mat-header-cell>
         <mat-cell *cdkCellDef="let row let rowIndex = index"  [formGroupName]="rowIndex"> 
           <input type="text" size="3" formControlName="weight">
@@ -146,9 +182,8 @@
         </mat-cell>
       </ng-container> -->
 
-      <!-- Header and Row Declarations -->
-      <!-- <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+<!-- Header and Row Declarations -->
+<!-- <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
   </form> -->
-

@@ -1,10 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../_services/authenticatoin.service';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({
+  templateUrl: 'login.component.html',
+  styleUrls: ['login.component.css'],
+})
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   loading = false;
@@ -12,7 +20,11 @@ export class LoginComponent implements OnInit {
   error: string = '';
   success!: string;
   returnUrl!: string;
+  newOne = new FormControl('');
 
+  loginUser(item: any) {
+    console.warn(item);
+  }
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
